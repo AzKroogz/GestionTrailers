@@ -29,7 +29,6 @@ public class ProductoDAO {
             return false;
         }
     }
-
     public static List<productos> listar() {
         List<productos> lista = new ArrayList<>();
         String sql = "SELECT * FROM productos";
@@ -56,7 +55,6 @@ public class ProductoDAO {
 
         return lista;
     }
-
     public static boolean actualizar(productos producto) {
         String sql = "UPDATE productos SET nombre = ?, categoria = ?, precio = ?, descripcion = ?, activo = ? WHERE id_producto = ?";
 
@@ -78,7 +76,6 @@ public class ProductoDAO {
             return false;
         }
     }
-
     public static boolean eliminarLogicamente(int id) {
         String sql = "UPDATE productos SET activo = false WHERE id_producto = ?";
 
